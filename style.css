@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: Poppins, "sans-serif";
+}
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./gradient-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.backg{
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(7px);
+    
+    border-radius: 1rem;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.25);
+    border-image: initial;
+    padding: 0.5rem 3rem;
+}
+[data-game_cont]{
+    
+    width: 90%;
+    max-width: 20rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    aspect-ratio: 1/1;
+    padding: 2rem;
+    position: relative;
+}
+[data-overlay]{
+    position: absolute;
+    background-color: transparent;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 10;
+    display: none;
+}
+[data-overlay].active{
+    display: flex;
+}
+.box{
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all;
+    transition-duration: 0.3s;
+    transition-timing-function: linear
+    
+}
+.box1,.box4,.box2,.box5{
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+.box7,.box8{
+    border-right: 2px solid white;
+}
+.box3,.box6{
+    border-bottom: 2px solid white;
+}
+[data-new_game]{
+    opacity: 0;
+}
+[data-new_game].active{
+    opacity: 1;
+}
+div.box.win{
+    background-color: rgba(0,255,0,0.3);
+}
+[data-new_game]{
+    cursor: pointer;
+    
+    transition: all;
+    transition-duration: 0.3s;
+    transition-timing-function: linear
+}
